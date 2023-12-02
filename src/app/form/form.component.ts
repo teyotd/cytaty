@@ -12,16 +12,11 @@ export class FormComponent implements OnInit {
   // ktore są udbierane w app.component W tym przypadku będe emitowal typ danych Quotation czyli mojego interfejsu, czyli wypchne author, sentence, votes
 
   // Pole do ukrywania i pokazywania formularza
-  showForm = true;
   constructor() {}
   // pole quotation reprezentuje pojedynczy cytat
   quotation: Quotation = { author: '', sentence: '', votes: 0 };
   ngOnInit(): void {}
 
-  // przełącza pole klasy true / false
-  onSwitchForm(): void {
-    this.showForm = !this.showForm;
-  }
   // dodaje cytat na początek listy i resetuje pole quotation
   //unshift()dodaje określone elementy na początek tablicy i zwraca nową długość tablicy.
   addQuotation() {
